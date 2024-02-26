@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using 
 
-public class Time : MonoBehaviour
+public class Days : MonoBehaviour
 {
     private int DayCounter;
     private int timePerDay = 10; 
