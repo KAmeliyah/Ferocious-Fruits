@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Example : MonoBehaviour
 {
+    public cameraManager camera;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class Example : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnMouseDown()
+    {
+        camera.changeTarget(this.gameObject);
     }
 }
