@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BuildingStats : MonoBehaviour
 {
+
+    public BuildingStats stats;
+
     // Start is called before the first frame update
     void Start()
     {
