@@ -5,7 +5,9 @@ using UnityEngine;
 public class University : MonoBehaviour
 {
     //initial class variables for what each building would need to include
-    private int Budget;
+    private int Budget = 162400000;
+    //anual income for Bournemouth university is £162.4 mill
+    // not sure how much we want to give to the player to use but we can figure it out
     private int cost;
     private float floodLevel;
     private float studentSatisfaction;
