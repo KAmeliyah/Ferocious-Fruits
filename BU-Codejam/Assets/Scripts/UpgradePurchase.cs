@@ -1,9 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UpgradePurchase : MonoBehaviour
 {
+    
+    public universityManager HonkyDonky;
+
+
+
+    
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/*
     private int EV_ChargerInstall = 750; //per charger
     
     private int LED_Light_Bulb_Replacement = 5000; //per building
@@ -32,4 +57,5 @@ public class UpgradePurchase : MonoBehaviour
     private int Heating_Lower;
     private int Change_Operate_Hours;
     private int Lights_off_Night;
-}
+
+    */

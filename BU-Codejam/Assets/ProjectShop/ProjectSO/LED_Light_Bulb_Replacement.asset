@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8588a6e441f1e04595e244a63aff652, type: 3}
   m_Name: LED_Light_Bulb_Replacement
   m_EditorClassIdentifier: 
-  projectName: 
-  description: 
-  cost: 0
+  projectName: LED Lightbulb Replacement
+  cost: 5000

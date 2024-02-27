@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8588a6e441f1e04595e244a63aff652, type: 3}
   m_Name: LED_Light_Fixture_Replacement
   m_EditorClassIdentifier: 
-  projectName: 
-  cost: 0
+  projectName: LED Light Fixture Replacement
+  cost: 85000

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class University : MonoBehaviour
+public class universityManager : MonoBehaviour
 {
     //initial class variables for what each building would need to include
-    private int Budget = 162400000;
-    //anual income for Bournemouth university is £162.4 mill
+    public int budget = 162400000;
+    //annual income for Bournemouth university is £162.4 mill
     // not sure how much we want to give to the player to use but we can figure it out
     private int cost;
     private float floodLevel;
