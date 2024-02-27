@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class cameraManager : MonoBehaviour
 {
-    public float zoomSpeed;
-    public float dragSpeed;
+    public float zoomSpeed = 100f;
+    public float dragSpeed = 20f;
 
     public Vector3 camTarget;
     public Vector3 prevPos;
     Vector3 dragOrigin;
     Vector3 dragPos;
     Vector3 dragMove;
-    public GameObject dragBox;
     public bool move = false;
     public bool focused = false;
+    public GameObject canvasShop;
     public Button exitButton;
     // Start is called before the first frame update
     void Start()
@@ -38,10 +38,12 @@ public class cameraManager : MonoBehaviour
         if (focused == true && move == false)
         {
             exitButton.gameObject.SetActive(true);
+            canvasShop.SetActive(true);
         }
         else
         {
             exitButton.gameObject.SetActive(false);
+            canvasShop.SetActive(false);
         }
 
         if (move == false && focused == false)

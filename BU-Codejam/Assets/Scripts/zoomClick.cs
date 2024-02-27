@@ -34,12 +34,9 @@ public class Example : MonoBehaviour
     {
         if (camera.move == false && camera.focused == false)
         {
-            if (Input.GetMouseButtonUp(0))
-            {
-                camera.changeTarget(lookAt.position);
-                camera.focused = true;
-                isFocus = true;
-            }
+            camera.changeTarget(lookAt.position);
+            camera.focused = true;
+            isFocus = true;
         }
     }
 }
