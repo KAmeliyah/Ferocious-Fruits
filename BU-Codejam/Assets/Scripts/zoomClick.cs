@@ -22,6 +22,7 @@ public class Example : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             { 
                 isFocus = false;
+                camera.focused = false;
                 camera.changeTarget(camera.prevPos);
             }
 
@@ -31,6 +32,7 @@ public class Example : MonoBehaviour
     private void OnMouseDown()
     {
         camera.changeTarget(lookAt.position);
+        camera.focused = false;
         isFocus = true;
     }
 }

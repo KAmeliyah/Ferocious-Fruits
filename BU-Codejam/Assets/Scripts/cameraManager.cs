@@ -9,7 +9,8 @@ public class cameraManager : MonoBehaviour
     public Vector3 camTarget;
     public Vector3 prevPos;
     public float speed;
-    bool move = false;
+    public bool move = false;
+    public bool focused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,6 @@ public class cameraManager : MonoBehaviour
             {
                 move = false;
             }
-            Debug.Log(prevPos);
             transform.position = Vector3.MoveTowards(transform.position, camTarget, speed * Time.deltaTime);
         }
     }
