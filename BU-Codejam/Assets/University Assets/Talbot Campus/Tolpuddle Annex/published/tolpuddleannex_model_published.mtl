@@ -1,2 +1,32 @@
-# Blender 4.0.2 MTL File: 'tolpuddleannex_model_v002.blend'
+# Blender 4.0.2 MTL File: 'tolpuddleannex_model_v003.blend'
 # www.blender.org
+
+newmtl M_tolpuddle_green
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.732661 0.800149 0.695922
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl M_tolpuddle_roof
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.143456 0.143456 0.143456
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl M_tolpuddle_window
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.407049 0.407049 0.407049
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
