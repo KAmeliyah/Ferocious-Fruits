@@ -9,6 +9,7 @@ public class cameraManager : MonoBehaviour
     public float zoomSpeed = 100f;
     public float dragSpeed = 20f;
 
+    public Cinemachine.CinemachineVirtualCamera camera;
     public Vector3 camTarget;
     public Vector3 prevPos;
     Vector3 dragOrigin;
@@ -55,7 +56,7 @@ public class cameraManager : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 dragPos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-                dragMove = new Vector3(dragPos.x * dragSpeed, 0, dragPos.y * dragSpeed);
+                dragMove = new Vector3(dragPos.y * dragSpeed, 0, -(dragPos.x * dragSpeed));
                 transform.Translate(dragMove, Space.World);
             }
         }
