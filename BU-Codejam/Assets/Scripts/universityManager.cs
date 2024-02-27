@@ -29,10 +29,12 @@ public class universityManager : MonoBehaviour
     void Update()
     {
         if (Time.time % 10 != 0)
+            //will update every 10 seconds
         {
             if (emissionLevel > 70)
             {
                 floodLevel += 3;
+                //increase the flood level based on how high emissions are
             }
             else if (emissionLevel > 40)
             {

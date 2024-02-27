@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
-public class Example : MonoBehaviour
+public class zoomClick : MonoBehaviour
 {
+    
     public cameraManager camera;
     Transform lookAt;
     bool isFocus = false;
@@ -37,6 +38,7 @@ public class Example : MonoBehaviour
             camera.changeTarget(lookAt.position);
             camera.focused = true;
             isFocus = true;
+            
         }
     }
 }

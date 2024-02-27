@@ -11,11 +11,12 @@ public class UpgradePurchase : MonoBehaviour
     public ShopTemplate[] shopPanels;
     public Button[] purchaseButtons;
     public universityManager BU;
+    public zoomClick building;
 
 
     void Awake()
     {
-       
+        building = GetComponent<zoomClick>();
 
         for(int i = 0; i < shopItemsSO.Length; i++)
         {
@@ -56,8 +57,19 @@ public class UpgradePurchase : MonoBehaviour
     {
         for(int i = 0; i < shopItemsSO.Length; i++) 
         {
-            shopPanels[i].projectName.text = shopItemsSO[i].projectName;
-            shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
+            if (shopItemsSO[i].name == "Change_Operate_Hours" || shopItemsSO[i].name == "Air_source_heat_pump")
+            {
+                if ((building.name == "Fusion" && shopItemsSO[i].name == "Change_Operate_Hours") || (building.name == "Dorset" && shopItemsSO[i].name == "Air_source_heat_pump"))
+                {
+                    shopPanels[i].projectName.text = shopItemsSO[i].projectName;
+                    shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
+                }
+            }
+            else
+            {
+                shopPanels[i].projectName.text = shopItemsSO[i].projectName;
+                shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
+            }
         }
     }
 
