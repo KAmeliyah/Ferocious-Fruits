@@ -31,8 +31,11 @@ public class Example : MonoBehaviour
 
     private void OnMouseDown()
     {
-        camera.changeTarget(lookAt.position);
-        camera.focused = true;
-        isFocus = true;
+        if (camera.move == false && camera.focused == false)
+        {
+            camera.changeTarget(lookAt.position);
+            camera.focused = true;
+            isFocus = true;
+        }
     }
 }
