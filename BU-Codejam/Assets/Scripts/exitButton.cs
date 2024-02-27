@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class exitButton : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class exitButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (camera.focused && camera.move == false)
+        Debug.Log(camera.focused);
+        if (camera.focused == true && camera.move == false)
         {
             gameObject.SetActive(true);
         }

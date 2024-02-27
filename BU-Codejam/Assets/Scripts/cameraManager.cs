@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class cameraManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class cameraManager : MonoBehaviour
     public float speed;
     public bool move = false;
     public bool focused = false;
+    public Button exitButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,14 @@ public class cameraManager : MonoBehaviour
                 move = false;
             }
             transform.position = Vector3.MoveTowards(transform.position, camTarget, speed * Time.deltaTime);
+        }
+        if (focused == true && move == false)
+        {
+            exitButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            exitButton.gameObject.SetActive(false);
         }
     }
 

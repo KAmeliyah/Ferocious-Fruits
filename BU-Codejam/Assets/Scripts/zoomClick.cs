@@ -32,7 +32,7 @@ public class Example : MonoBehaviour
     private void OnMouseDown()
     {
         camera.changeTarget(lookAt.position);
-        camera.focused = false;
+        camera.focused = true;
         isFocus = true;
     }
 }

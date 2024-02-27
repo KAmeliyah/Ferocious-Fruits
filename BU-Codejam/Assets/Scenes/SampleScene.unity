@@ -2189,6 +2189,9 @@ MonoBehaviour:
   camTarget: {x: 0, y: 0, z: 0}
   prevPos: {x: 0, y: 0, z: 0}
   speed: 100
+  move: 0
+  focused: 0
+  exitButton: {fileID: 288598530}
 --- !u!65 &1227196305
 BoxCollider:
   m_ObjectHideFlags: 0
