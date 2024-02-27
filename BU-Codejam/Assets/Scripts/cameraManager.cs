@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class cameraManager : MonoBehaviour
 {
-    Cinemachine.CinemachineVirtualCamera camera;
-    public GameObject camTarget;
+    public Cinemachine.CinemachineVirtualCamera camera;
+    public Vector3 camTarget;
+    public Vector3 prevPos;
     public float speed;
     bool move = false;
     // Start is called before the first frame update
     void Start()
     {
-        camera = GetComponent<Cinemachine.CinemachineVirtualCamera>();
+
     }
 
     // Update is called once per frame
@@ -20,19 +21,20 @@ public class cameraManager : MonoBehaviour
     {
         if (move) 
         {
-            if (transform.position == camTarget.transform.position)
+            if (transform.position == camTarget)
             {
-                move = true;
+                move = false;
             }
-            transform.position = Vector3.MoveTowards(transform.position, camTarget.transform.position, speed * Time.deltaTime);
+            Debug.Log(prevPos);
+            transform.position = Vector3.MoveTowards(transform.position, camTarget, speed * Time.deltaTime);
         }
     }
 
-    public void changeTarget(GameObject target)
+    public void changeTarget(Vector3 target)
     {
-        camTarget = target;
+        camTarget = new Vector3(target.x, target.y, target.z);
+        prevPos = transform.position;
+        
         move = true;
-        //camera.m_LookAt = camTarget.transform;
-        ////camera.m_Lens.FieldOfView = 20;
     }
 }
