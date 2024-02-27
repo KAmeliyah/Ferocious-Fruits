@@ -10,6 +10,7 @@ public class universityManager : MonoBehaviour
     // not sure how much we want to give to the player to use but we can figure it out
     private int cost;
     private float floodLevel;
+    private float emissionLevel;
     private float studentSatisfaction;
     private float energyConsumed;
     private float waterConsumed;
@@ -18,12 +19,34 @@ public class universityManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        floodLevel = 0;
+        emissionLevel = 100;
+        studentSatisfaction = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.time % 10 != 0)
+        {
+            if (emissionLevel > 70)
+            {
+                floodLevel += 3;
+            }
+            else if (emissionLevel > 40)
+            {
+                floodLevel += 2;
+            }
+            else if (emissionLevel > 1)
+            {
+                floodLevel += 1;
+            }
+            else if (emissionLevel == 0)
+            {
+                emissionLevel += 0;
+            }
+        }
+
     }
 }
