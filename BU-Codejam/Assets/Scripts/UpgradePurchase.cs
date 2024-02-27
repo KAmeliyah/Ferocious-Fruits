@@ -11,21 +11,27 @@ public class UpgradePurchase : MonoBehaviour
     public ShopTemplate[] shopPanels;
     public Button[] purchaseButtons;
     public universityManager BU;
-    public zoomClick building;
-
+    public zoomClick building; //script
+    string bname;
 
     void Awake()
     {
-        building = GetComponent<zoomClick>();
+        
+    }
 
-        for(int i = 0; i < shopItemsSO.Length; i++)
+    public void AwakenShop(zoomClick activator)
+    {
+        building = activator;
+        bname = building.name; //bject name
+      
+
+        for (int i = 0; i < shopItemsSO.Length; i++)
         {
             shopPanelsGO[i].SetActive(true);
         }
         LoadPanels();
         CheckPurchaseable();
     }
-
 
     public void CheckPurchaseable()
     {
@@ -63,6 +69,10 @@ public class UpgradePurchase : MonoBehaviour
                 {
                     shopPanels[i].projectName.text = shopItemsSO[i].projectName;
                     shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
+                }
+                else
+                {
+                    shopPanelsGO[i].SetActive(false);
                 }
             }
             else

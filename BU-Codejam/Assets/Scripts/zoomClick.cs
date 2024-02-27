@@ -7,6 +7,7 @@ public class zoomClick : MonoBehaviour
 {
     
     public cameraManager camera;
+    public UpgradePurchase shop;
     Transform lookAt;
     bool isFocus = false;
 
@@ -38,6 +39,7 @@ public class zoomClick : MonoBehaviour
             camera.changeTarget(lookAt.position);
             camera.focused = true;
             isFocus = true;
+            shop.AwakenShop(this);
             
         }
     }
