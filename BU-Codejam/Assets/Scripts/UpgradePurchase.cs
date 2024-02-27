@@ -6,14 +6,60 @@ using TMPro;
 
 public class UpgradePurchase : MonoBehaviour
 {
-    
-    public universityManager HonkyDonky;
+    public ShopItemSO[] shopItemsSO;
+    public GameObject[] shopPanelsGO;
+    public ShopTemplate[] shopPanels;
+    public Button[] purchaseButtons;
+    public universityManager BU;
 
 
+    void Awake()
+    {
+       
 
-    
+        for(int i = 0; i < shopItemsSO.Length; i++)
+        {
+            shopPanelsGO[i].SetActive(true);
+        }
+        LoadPanels();
+        CheckPurchaseable();
+    }
 
 
+    public void CheckPurchaseable()
+    {
+        for(int i = 0;i < shopItemsSO.Length;i++) 
+        {
+            if (BU.budget >= shopItemsSO[i].cost)
+            {
+                purchaseButtons[i].interactable = true;
+            }
+            else
+            {
+                purchaseButtons[i].interactable = false;
+            }
+        }
+    }
+
+    public void PurchaseProject(int btnNo)
+    {
+        if (BU.budget >= shopItemsSO[btnNo].cost)
+        {
+            BU.budget -= shopItemsSO[btnNo].cost;
+            //budget ui text
+            CheckPurchaseable();
+        }
+    }
+
+
+    public void LoadPanels()
+    {
+        for(int i = 0; i < shopItemsSO.Length; i++) 
+        {
+            shopPanels[i].projectName.text = shopItemsSO[i].projectName;
+            shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
+        }
+    }
 
 
 
