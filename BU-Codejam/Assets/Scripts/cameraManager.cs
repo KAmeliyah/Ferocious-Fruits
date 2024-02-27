@@ -58,6 +58,10 @@ public class cameraManager : MonoBehaviour
                 dragPos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
                 dragMove = new Vector3(dragPos.y * dragSpeed, 0, -(dragPos.x * dragSpeed));
                 transform.Translate(dragMove, Space.World);
+                //if (dragMove.z < -50 || dragMove.z > 220 || dragMove.x < -180 || dragMove.x > 224)
+                //{
+
+                //}
             }
         }
     }

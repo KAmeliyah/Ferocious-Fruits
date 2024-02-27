@@ -10,20 +10,19 @@ public class UpgradePurchase : MonoBehaviour
     public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] purchaseButtons;
+
+    public TMP_Text budgetText;
     public universityManager BU;
     public zoomClick building; //script
     string bname;
 
-    void Awake()
-    {
-        
-    }
 
     public void AwakenShop(zoomClick activator)
     {
         building = activator;
         bname = building.name; //bject name
-      
+
+        budgetText.text = "Budget: " + BU.budget.ToString();
 
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
@@ -53,7 +52,7 @@ public class UpgradePurchase : MonoBehaviour
         if (BU.budget >= shopItemsSO[btnNo].cost)
         {
             BU.budget -= shopItemsSO[btnNo].cost;
-            //budget ui text
+            budgetText.text = "Budget: " + BU.budget.ToString();
             CheckPurchaseable();
         }
     }
@@ -65,7 +64,7 @@ public class UpgradePurchase : MonoBehaviour
         {
             if (shopItemsSO[i].name == "Change_Operate_Hours" || shopItemsSO[i].name == "Air_source_heat_pump")
             {
-                if ((building.name == "Fusion" && shopItemsSO[i].name == "Change_Operate_Hours") || (building.name == "Dorset" && shopItemsSO[i].name == "Air_source_heat_pump"))
+                if ((building.name == "PGB" && shopItemsSO[i].name == "Change_Operate_Hours") || (building.name == "Dorset" && shopItemsSO[i].name == "Air_source_heat_pump"))
                 {
                     shopPanels[i].projectName.text = shopItemsSO[i].projectName;
                     shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
@@ -82,12 +81,6 @@ public class UpgradePurchase : MonoBehaviour
             }
         }
     }
-
-
-
-
-
-
 }
 
 
