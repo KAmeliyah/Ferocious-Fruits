@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class Example : MonoBehaviour
@@ -7,7 +8,7 @@ public class Example : MonoBehaviour
     public cameraManager camera;
     Transform lookAt;
     bool isFocus = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +32,11 @@ public class Example : MonoBehaviour
 
     private void OnMouseDown()
     {
-        camera.changeTarget(lookAt.position);
-        camera.focused = true;
-        isFocus = true;
+        if (camera.move == false && camera.focused == false)
+        {
+            camera.changeTarget(lookAt.position);
+            camera.focused = true;
+            isFocus = true;
+        }
     }
 }
