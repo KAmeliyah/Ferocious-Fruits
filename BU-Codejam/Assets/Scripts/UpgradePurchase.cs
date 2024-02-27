@@ -13,14 +13,16 @@ public class UpgradePurchase : MonoBehaviour
     public universityManager BU;
 
 
-    void Start()
+    void Awake()
     {
-        BU = GetComponent<universityManager>();
+       
+
         for(int i = 0; i < shopItemsSO.Length; i++)
         {
             shopPanelsGO[i].SetActive(true);
         }
         LoadPanels();
+        CheckPurchaseable();
     }
 
 
@@ -36,6 +38,16 @@ public class UpgradePurchase : MonoBehaviour
             {
                 purchaseButtons[i].interactable = false;
             }
+        }
+    }
+
+    public void PurchaseProject(int btnNo)
+    {
+        if (BU.budget >= shopItemsSO[btnNo].cost)
+        {
+            BU.budget -= shopItemsSO[btnNo].cost;
+            //budget ui text
+            CheckPurchaseable();
         }
     }
 
