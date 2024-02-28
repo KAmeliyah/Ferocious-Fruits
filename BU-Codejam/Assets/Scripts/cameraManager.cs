@@ -18,6 +18,7 @@ public class cameraManager : MonoBehaviour
     Vector3 dragMove;
     public bool move = false;
     public bool focused = false;
+    public bool lockMouse = true;
     public GameObject canvasShop;
     public Button exitButton;
     // Start is called before the first frame update
@@ -69,7 +70,6 @@ public class cameraManager : MonoBehaviour
         mainCamera.m_Priority += 2;
         camTarget = new Vector3(target.x, target.y, target.z);
         prevPos = transform.position;
-        
         move = true;
     }
 
