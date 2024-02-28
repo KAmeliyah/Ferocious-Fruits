@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class THscript : MonoBehaviour
 {
+    public List<ScriptableObject>  purchasedUpgrades;
     // Start is called before the first frame update
     void Start()
     {

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PHScript : MonoBehaviour
+public class FusionScript : MonoBehaviour
 {
+    public List<ScriptableObject> purchasedUpgrades;
     // Start is called before the first frame update
     void Start()
     {
