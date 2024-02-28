@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PGBScript : MonoBehaviour
 {
-    public ScriptableObject[] purchasedUpgrades;
+    public List<ScriptableObject> purchasedUpgrades;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +15,10 @@ public class PGBScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void storePurchased(ScriptableObject _upgrade)
+    {
+        purchasedUpgrades.Add(_upgrade);
     }
 }

@@ -52,6 +52,7 @@ public class UpgradePurchase : MonoBehaviour
         if (BU.budget >= shopItemsSO[btnNo].cost)
         {
             BU.budget -= shopItemsSO[btnNo].cost;
+            building.storePurchased(shopItemsSO[btnNo]);
             budgetText.text = "Budget: £" + BU.budget.ToString();
 
             CheckPurchaseable();

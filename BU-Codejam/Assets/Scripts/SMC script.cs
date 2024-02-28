@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SMCscript : MonoBehaviour
 {
-    public ScriptableObject[] purchasedUpgrades;
+    public List<ScriptableObject> purchasedUpgrades;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +15,9 @@ public class SMCscript : MonoBehaviour
     void Update()
     {
         
+    }
+    public void storePurchased(ScriptableObject _upgrade)
+    {
+        purchasedUpgrades.Add(_upgrade);
     }
 }
