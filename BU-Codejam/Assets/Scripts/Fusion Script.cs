@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FusionScript : MonoBehaviour
 {
-    public List<ScriptableObject> purchasedUpgrades;
+    public ScriptableObject[] purchasedUpgrades;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +15,5 @@ public class FusionScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void storePurchased(ScriptableObject _upgrade)
-    {
-        purchasedUpgrades.Add(_upgrade);
     }
 }

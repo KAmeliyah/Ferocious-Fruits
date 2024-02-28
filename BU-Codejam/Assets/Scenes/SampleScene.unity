@@ -2497,9 +2497,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 38316c15f6e10af4093120839d349da9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1830021346}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 38316c15f6e10af4093120839d349da9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1830021350}
   m_SourcePrefab: {fileID: 100100000, guid: 38316c15f6e10af4093120839d349da9, type: 3}
 --- !u!1 &454262394
 GameObject:
@@ -2920,9 +2917,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 7b3b710939a1e3a4d9afe09d92a559f4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1600067535}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 7b3b710939a1e3a4d9afe09d92a559f4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1600067537}
   m_SourcePrefab: {fileID: 100100000, guid: 7b3b710939a1e3a4d9afe09d92a559f4, type: 3}
 --- !u!224 &557688132 stripped
 RectTransform:
@@ -3262,9 +3256,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2aabd67bac7a52749abb1104e46f6fe4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 968726662}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2aabd67bac7a52749abb1104e46f6fe4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 968726663}
   m_SourcePrefab: {fileID: 100100000, guid: 2aabd67bac7a52749abb1104e46f6fe4, type: 3}
 --- !u!1001 &704335224
 PrefabInstance:
@@ -4548,19 +4539,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 2aabd67bac7a52749abb1104e46f6fe4, type: 3}
---- !u!114 &968726663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968726659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8c39a15fba1ff40b096022d21bbefd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purchasedUpgrades: []
 --- !u!1 &969368153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1150780387951627032, guid: 40b875b64907e064182074813a6dcef7, type: 3}
@@ -7368,19 +7346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1227196304}
   shop: {fileID: 229728805}
---- !u!114 &1600067537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600067533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfd35b2584a3f314baa9c25d0a0ca754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purchasedUpgrades: []
 --- !u!1 &1614076615
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,7 +8452,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 5cad7eff7a86cbc4a8b7732d927366ea, type: 3}
-<<<<<<< Updated upstream
 --- !u!1 &1765910183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d3db20607fb502e4ca5d31d3d1e8c477, type: 3}
@@ -8521,15 +8485,11 @@ MeshCollider:
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: d3db20607fb502e4ca5d31d3d1e8c477, type: 3}
 --- !u!114 &1765910186
-=======
---- !u!114 &1741356965
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1765910183}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8538,15 +8498,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1227196304}
   shop: {fileID: 229728805}
-=======
-  m_GameObject: {fileID: 1741356961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769bfe3f540926644aec2687bf275de4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purchasedUpgrades: []
->>>>>>> Stashed changes
 --- !u!1001 &1767621674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8895,19 +8846,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 38316c15f6e10af4093120839d349da9, type: 3}
   m_PrefabInstance: {fileID: 437196390}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1830021350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830021345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96ba04f645c20f43aa8f8c156026bb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  purchasedUpgrades: []
 --- !u!1001 &1833032851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9174,9 +9112,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cad7eff7a86cbc4a8b7732d927366ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1741356964}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cad7eff7a86cbc4a8b7732d927366ea, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1741356965}
   m_SourcePrefab: {fileID: 100100000, guid: 5cad7eff7a86cbc4a8b7732d927366ea, type: 3}
 --- !u!1 &1937087298 stripped
 GameObject:
