@@ -35,7 +35,7 @@ public class zoomClick : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (camera.move == false && camera.focused == false)
+        if (camera.move == false && camera.focused == false && camera.lockMouse == false)
         {
             camera.changeTarget(lookAt.position);
             camera.focused = true;
