@@ -8,6 +8,7 @@ public class zoomClick : MonoBehaviour
     
     public cameraManager camera;
     public UpgradePurchase shop;
+    
     Transform lookAt;
     bool isFocus = false;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class UpgradePurchase : MonoBehaviour
 {
@@ -13,7 +14,11 @@ public class UpgradePurchase : MonoBehaviour
 
     public TMP_Text budgetText;
     public universityManager BU;
-    public zoomClick building; //script
+    public zoomClick zoomScript; //script
+
+    public buildingScript buildingStoredPurchase;
+
+    public GameObject building;
 
     
     string bname;
@@ -21,8 +26,11 @@ public class UpgradePurchase : MonoBehaviour
 
     public void AwakenShop(zoomClick activator)
     {
-        building = activator; //building = building
-        bname = building.name; //bject name
+        zoomScript = activator; //building = building
+        bname = zoomScript.name; //bject name
+
+        building = GameObject.Find($"/Buildings/{bname}");
+        buildingStoredPurchase = building.GetComponent<buildingScript>();
 
         budgetText.text = "Budget: £" + BU.budget.ToString();
 
@@ -57,6 +65,10 @@ public class UpgradePurchase : MonoBehaviour
             BU.budget -= shopItemsSO[btnNo].cost;
             budgetText.text = "Budget: £" + BU.budget.ToString();
 
+           
+            buildingStoredPurchase.storePurchases(shopItemsSO[btnNo]);
+            
+
             CheckPurchaseable();
         }
     }
@@ -66,23 +78,27 @@ public class UpgradePurchase : MonoBehaviour
     {
         for(int i = 0; i < shopItemsSO.Length; i++) 
         {
-            if (shopItemsSO[i].name == "Change_Operate_Hours" || shopItemsSO[i].name == "Air_source_heat_pump")
+            if (!(buildingStoredPurchase.purchasedUpgrades.Contains(shopItemsSO[i])))
             {
-                if ((building.name == "PGB" && shopItemsSO[i].name == "Change_Operate_Hours") || (building.name == "Dorset" && shopItemsSO[i].name == "Air_source_heat_pump"))
+                if (shopItemsSO[i].name == "Change_Operate_Hours" || shopItemsSO[i].name == "Air_source_heat_pump")
+                {
+                    if ((building.name == "PGB" && shopItemsSO[i].name == "Change_Operate_Hours") || (building.name == "Dorset" && shopItemsSO[i].name == "Air_source_heat_pump"))
+                    {
+                        shopPanels[i].projectName.text = shopItemsSO[i].projectName;
+                        shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
+                    }
+                    else
+                    {
+                        shopPanelsGO[i].SetActive(false);
+                    }
+                }
+                else
                 {
                     shopPanels[i].projectName.text = shopItemsSO[i].projectName;
                     shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
                 }
-                else
-                {
-                    shopPanelsGO[i].SetActive(false);
-                }
             }
-            else
-            {
-                shopPanels[i].projectName.text = shopItemsSO[i].projectName;
-                shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
-            }
+         
         }
     }
 }
