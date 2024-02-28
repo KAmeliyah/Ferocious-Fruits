@@ -68,7 +68,7 @@ public class UpgradePurchase : MonoBehaviour
            
             buildingStoredPurchase.storePurchases(shopItemsSO[btnNo]);
             
-
+            LoadPanels();
             CheckPurchaseable();
         }
     }
@@ -78,8 +78,13 @@ public class UpgradePurchase : MonoBehaviour
     {
         for(int i = 0; i < shopItemsSO.Length; i++) 
         {
-            if (!(buildingStoredPurchase.purchasedUpgrades.Contains(shopItemsSO[i])))
+            if (buildingStoredPurchase.purchasedUpgrades.Contains(shopItemsSO[i]))
             {
+                shopPanelsGO[i].SetActive(false);
+            }
+            else
+            {
+
                 if (shopItemsSO[i].name == "Change_Operate_Hours" || shopItemsSO[i].name == "Air_source_heat_pump")
                 {
                     if ((building.name == "PGB" && shopItemsSO[i].name == "Change_Operate_Hours") || (building.name == "Dorset" && shopItemsSO[i].name == "Air_source_heat_pump"))
@@ -97,8 +102,8 @@ public class UpgradePurchase : MonoBehaviour
                     shopPanels[i].projectName.text = shopItemsSO[i].projectName;
                     shopPanels[i].costText.text = shopItemsSO[i].cost.ToString();
                 }
+
             }
-         
         }
     }
 }
