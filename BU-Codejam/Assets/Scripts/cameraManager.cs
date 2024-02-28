@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class cameraManager : MonoBehaviour
 {
     public float zoomSpeed = 100f;
-    public float dragSpeed = 20f;
+    public float dragSpeed = 50f;
 
     public Cinemachine.CinemachineVirtualCamera mainCamera;
     public Cinemachine.CinemachineVirtualCamera dragCamera;
@@ -15,10 +15,13 @@ public class cameraManager : MonoBehaviour
     public Vector3 prevPos;
     Vector3 dragOrigin;
     Vector3 dragPos;
-    Vector3 dragMove;
-    public bool move = false;
+    Vector3 lastDrag;
+    Vector3 dragzooming;
+    public bool zooming = false;
     public bool focused = false;
     public bool lockMouse = true;
+    public bool hold = false;
+    public bool drag = false;
     public GameObject canvasShop;
     public Button exitButton;
     // Start is called before the first frame update
@@ -30,19 +33,19 @@ public class cameraManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (move) 
+        if (zooming)
         {
             if (transform.position == camTarget)
             {
-                move = false;
+                zooming = false;
                 mainCamera.m_Priority -= 2;
             }
             transform.position = Vector3.MoveTowards(transform.position, camTarget, zoomSpeed * Time.deltaTime);
         }
-        if (focused == true && move == false)
+        if (focused == true && zooming == false)
         {
-            exitButton.gameObject.SetActive(true);
-            canvasShop.SetActive(true);
+               exitButton.gameObject.SetActive(true);
+               canvasShop.SetActive(true);
         }
         else
         {
@@ -50,19 +53,42 @@ public class cameraManager : MonoBehaviour
             canvasShop.SetActive(false);
         }
 
-        if (move == false && focused == false)
+        if (zooming == false && focused == false)
         {
             if (Input.GetMouseButtonDown(0))
-            {
-                dragOrigin = Input.mousePosition;
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                dragPos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-                dragMove = new Vector3(dragPos.y * dragSpeed, 0, -(dragPos.x * dragSpeed));
-                transform.Translate(dragMove, Space.World);
+            {   
+                if (!hold)
+                {
+                    dragOrigin = Input.mousePosition;
+                    lastDrag = dragOrigin;
+                    hold = true;
+                }
+
+            
             }
         }
+
+        if (hold)
+        {
+            dragPos = Camera.main.ScreenToViewportPoint(Input.mousePosition - lastDrag);
+            dragzooming = new Vector3(dragPos.y * dragSpeed, 0, -(dragPos.x * dragSpeed));
+            transform.Translate(dragzooming, Space.World);
+            lastDrag = Input.mousePosition;
+            
+            if (dragOrigin != lastDrag)
+            {
+                    drag = true;
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            hold = false;
+            dragPos = new Vector3(0, 0, 0);
+            dragzooming = new Vector3(0, 0, 0);
+            drag = false;
+        }
+
     }
 
     public void changeTarget(Vector3 target)
@@ -70,7 +96,7 @@ public class cameraManager : MonoBehaviour
         mainCamera.m_Priority += 2;
         camTarget = new Vector3(target.x, target.y, target.z);
         prevPos = transform.position;
-        move = true;
+        zooming = true;
     }
 
     void clickExit()

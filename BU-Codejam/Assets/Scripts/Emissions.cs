@@ -9,6 +9,7 @@ public class Emissions : MonoBehaviour
     public int emissions = 0;
     public int maxEmissions = 500;
     public int emissionRate = 25;
+    public EndScreen endScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class Emissions : MonoBehaviour
 
         if (emissions == maxEmissions)
         {
-
+            endScreen.Show();
         }
     }
 

@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class zoomClick : MonoBehaviour
 {
-    
+
     public cameraManager camera;
     public UpgradePurchase shop;
-    
+
     Transform lookAt;
     bool isFocus = false;
 
@@ -24,7 +24,7 @@ public class zoomClick : MonoBehaviour
         if (isFocus)
         {
             if (Input.GetKeyDown(KeyCode.E))
-            { 
+            {
                 isFocus = false;
                 camera.focused = false;
                 camera.changeTarget(camera.prevPos);
@@ -33,15 +33,15 @@ public class zoomClick : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
-        if (camera.move == false && camera.focused == false && camera.lockMouse == false)
+        if (camera.zooming == false && camera.focused == false && camera.lockMouse == false && !camera.drag)
         {
             camera.changeTarget(lookAt.position);
             camera.focused = true;
             isFocus = true;
             shop.AwakenShop(this);
-            
+
         }
     }
 }

@@ -18,7 +18,7 @@ public class exitButton : MonoBehaviour
     void Update()
     {
         Debug.Log(camera.focused);
-        if (camera.focused == true && camera.move == false)
+        if (camera.focused == true && camera.zooming == false)
         {
             gameObject.SetActive(true);
         }

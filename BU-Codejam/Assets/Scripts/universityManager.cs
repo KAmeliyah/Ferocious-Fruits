@@ -31,27 +31,6 @@ public class universityManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time % 10 != 0)
-            //will update every 10 seconds
-        {
-            if (emissionLevel > 70)
-            {
-                floodLevel += 3;
-                //increase the flood level based on how high emissions are
-            }
-            else if (emissionLevel > 40)
-            {
-                floodLevel += 2;
-            }
-            else if (emissionLevel > 1)
-            {
-                floodLevel += 1;
-            }
-            else if (emissionLevel == 0)
-            {
-                emissionLevel += 0;
-            }
-        }
 
     }
 }

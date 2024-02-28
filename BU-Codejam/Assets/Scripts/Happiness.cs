@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Happiness : MonoBehaviour
 {
-    private int happy;
+    public int happy;
     private Image imageComponent;
     // Start is called before the first frame update
     void Start()

@@ -16,6 +16,8 @@ public class Weeks : MonoBehaviour
     public Emissions emissions;
     public Happiness happiness;
 
+    public EndScreen endScreen;
+
 
     //for now each week will be 3 seconds (prompt every minute or week for doing upgrades)
 
@@ -38,6 +40,11 @@ public class Weeks : MonoBehaviour
 
             // Update the last iteration time
             lastIterationTime = Time.time;
+        }
+
+        if (week == 42)
+        {
+            endScreen.Show();
         }
     }
 }
