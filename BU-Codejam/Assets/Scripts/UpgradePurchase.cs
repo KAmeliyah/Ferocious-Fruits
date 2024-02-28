@@ -14,6 +14,8 @@ public class UpgradePurchase : MonoBehaviour
     public TMP_Text budgetText;
     public universityManager BU;
     public zoomClick building; //script
+
+    
     string bname;
 
 
