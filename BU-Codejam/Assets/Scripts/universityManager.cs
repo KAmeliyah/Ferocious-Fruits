@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class universityManager : MonoBehaviour
@@ -16,13 +17,17 @@ public class universityManager : MonoBehaviour
     private float waterConsumed;
     private string buildingName;
 
+    public TMP_Text budgetText;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         floodLevel = 0;
         emissionLevel = 100;
         studentSatisfaction = 0;
-
+        budgetText.text = "Budget: £" + budget.ToString();
     }
 
     // Update is called once per frame

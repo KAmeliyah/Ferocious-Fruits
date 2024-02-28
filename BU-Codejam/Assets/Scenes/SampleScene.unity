@@ -5067,6 +5067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   budget: 162400000
+  budgetText: {fileID: 1669333776}
 --- !u!4 &1248096325
 Transform:
   m_ObjectHideFlags: 0
