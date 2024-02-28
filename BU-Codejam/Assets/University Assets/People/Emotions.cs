@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Emotions : MonoBehaviour
 {
+    public Happiness m_happy;
     Renderer ren;
     string[] PersonStates = { "Happy", "Meh", "Sad" };
     //will change based on certain things like lights
     string CurrentState;
-    float happyLevel = 50;
+    float happyLevel = Happiness.m_happy;
     //this will change based on how the student level in the game
 
     Material newMat;
