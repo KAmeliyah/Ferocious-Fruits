@@ -27,7 +27,7 @@ public class universityManager : MonoBehaviour
         floodLevel = 0;
         emissionLevel = 100;
         studentSatisfaction = 0;
-        budgetText.text = "Budget: £" + budget.ToString();
+        budgetText.text = "£" + budget.ToString();
     }
 
     // Update is called once per frame

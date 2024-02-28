@@ -24,7 +24,7 @@ public class UpgradePurchase : MonoBehaviour
         building = activator; //building = building
         bname = building.name; //bject name
 
-        budgetText.text = "Budget: £" + BU.budget.ToString();
+        budgetText.text = "£" + BU.budget.ToString();
 
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
@@ -55,7 +55,7 @@ public class UpgradePurchase : MonoBehaviour
         {
 
             BU.budget -= shopItemsSO[btnNo].cost;
-            budgetText.text = "Budget: £" + BU.budget.ToString();
+            budgetText.text = "£" + BU.budget.ToString();
 
             CheckPurchaseable();
         }
