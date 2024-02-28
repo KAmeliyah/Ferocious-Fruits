@@ -53,6 +53,7 @@ public class UpgradePurchase : MonoBehaviour
         {
             BU.budget -= shopItemsSO[btnNo].cost;
             budgetText.text = "Budget: £" + BU.budget.ToString();
+
             CheckPurchaseable();
         }
     }

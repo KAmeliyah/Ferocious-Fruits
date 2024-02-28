@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FusionScript : MonoBehaviour
 {
+    public ScriptableObject[] purchasedUpgrades;
     // Start is called before the first frame update
     void Start()
     {
