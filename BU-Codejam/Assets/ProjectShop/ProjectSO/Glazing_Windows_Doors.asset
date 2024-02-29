@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Glazing_Windows_Doors
   cost: 250000
-  emissionDecrease: 2.5
+  emissionDecrease: 0.025

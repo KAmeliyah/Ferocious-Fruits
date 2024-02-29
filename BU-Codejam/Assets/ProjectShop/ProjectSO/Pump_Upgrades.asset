@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Pump Upgrades
   cost: 40000
-  emissionDecrease: 1.6
+  emissionDecrease: 0.016

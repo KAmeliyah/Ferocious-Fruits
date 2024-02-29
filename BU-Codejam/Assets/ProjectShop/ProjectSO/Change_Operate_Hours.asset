@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Change Operate Hours
   cost: 0
-  emissionDecrease: 3
+  emissionDecrease: 0.03

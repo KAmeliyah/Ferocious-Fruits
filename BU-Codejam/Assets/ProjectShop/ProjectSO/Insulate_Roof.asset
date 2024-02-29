@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Insulate Roof
   cost: 75000
-  emissionDecrease: 3
+  emissionDecrease: 0.03

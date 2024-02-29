@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Boiler Upgrades
   cost: 15000
-  emissionDecrease: 2
+  emissionDecrease: 0.02

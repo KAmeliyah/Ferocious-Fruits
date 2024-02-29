@@ -8,7 +8,7 @@ public class Emissions : MonoBehaviour
     public universityManager m_universityManager;
     public float emissions = 0;
     public int maxEmissions = 500;
-    public float emissionRate = 15;
+    public float emissionRate = 25;
     public EndScreen endScreen;
 
     // Start is called before the first frame update
@@ -21,9 +21,9 @@ public class Emissions : MonoBehaviour
     void Update()
     {
         Transform pointer = transform.Find("Meter").Find("MeterPointer");
-        pointer.rotation = Quaternion.Euler(0f, 0f, 90f - (((float) emissions / maxEmissions) * 180f));
+        pointer.rotation = Quaternion.Euler(0f, 0f, 90f - ((emissions / maxEmissions) * 180f));
 
-        if (emissions == maxEmissions)
+        if (emissions >= maxEmissions)
         {
             endScreen.Show();
         }
@@ -36,7 +36,7 @@ public class Emissions : MonoBehaviour
 
     public void updateWithPurchase(float _emissionChange)
     {
-        emissions -= _emissionChange;
+        emissionRate -= emissionRate * _emissionChange;
     }
 
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,9 @@ public class Happiness : MonoBehaviour
     public int happy;
     private Image imageComponent;
     public universityManager BU;
+    public TMP_Text budgetText;
     int moneyChange = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +56,11 @@ public class Happiness : MonoBehaviour
     {
         happy += value;
         BU.budget += moneyChange;
+        budgetText.text = "£" + BU.budget.ToString();
+
+        if (happy > 100)
+        {
+            happy = 100;
+        }
     }
 }
