@@ -24,14 +24,10 @@ public class universityManager : MonoBehaviour
     void Start()
     {
         floodLevel = 0;
-        emissionLevel = 100;
-        studentSatisfaction = 0;
+        emissionLevel = 0;
+        studentSatisfaction = 100;
         budgetText.text = "£" + budget.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+ 
 }
