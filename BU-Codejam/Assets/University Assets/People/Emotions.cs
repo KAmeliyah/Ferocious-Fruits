@@ -5,19 +5,21 @@ using UnityEngine;
 
 public class Emotions : MonoBehaviour
 {
-    public Happiness m_happy;
+    public Happiness m_happiness;
     Renderer ren;
     string[] PersonStates = { "Happy", "Meh", "Sad" };
     //will change based on certain things like lights
     string CurrentState;
-    float happyLevel = Happiness.m_happy;
-    //this will change based on how the student level in the game
+    int happyLevel;
+
 
     Material newMat;
 
     // Start is called before the first frame update
     void Start()
     {
+        happyLevel = m_happiness.happy;
+        //this will change based on how the student level in the game
         ren = GetComponent<Renderer>();
         ren.material.color = Color.green;
         CurrentState = PersonStates[0];
