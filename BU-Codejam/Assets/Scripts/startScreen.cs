@@ -27,4 +27,11 @@ public class startScreen : MonoBehaviour
         camScript.lockMouse = false;
         Time.timeScale = 1;
     }
+
+    public void restartGame()
+    {
+        Time.timeScale = 0;
+        gameObject.SetActive(true);
+        camScript.lockMouse = true;
+    }
 }

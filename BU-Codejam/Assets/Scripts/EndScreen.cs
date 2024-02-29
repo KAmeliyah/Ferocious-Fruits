@@ -20,6 +20,7 @@ public class EndScreen : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
+        restartButton.onClick.AddListener(Restart);
     }
 
     // Update is called once per frame
@@ -36,7 +37,6 @@ public class EndScreen : MonoBehaviour
         homeButton = transform.GetChild(1).GetComponent<Button>();
 
         homeButton.onClick.AddListener(Restart);
-        restartButton.onClick.AddListener(Restart);
     }
 
     public void Restart()
