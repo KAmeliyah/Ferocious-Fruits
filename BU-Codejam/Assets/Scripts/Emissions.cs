@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Emissions : MonoBehaviour
 {
     public universityManager m_universityManager;
-    public int emissions = 0;
+    public float emissions = 0;
     public int maxEmissions = 500;
-    public int emissionRate = 25;
+    public float emissionRate = 15;
     public EndScreen endScreen;
     // Start is called before the first frame update
     void Start()
@@ -32,4 +32,11 @@ public class Emissions : MonoBehaviour
     {
         emissions += emissionRate;
     }
+
+    public void updateWithPurchase(float _emissionChange)
+    {
+        emissions -= _emissionChange;
+    }
+
+
 }

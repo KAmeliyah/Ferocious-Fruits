@@ -7,4 +7,5 @@ public class ShopItemSO : ScriptableObject
 {
     public string projectName;
     public int cost;
+    public float emissionDecrease;
 }

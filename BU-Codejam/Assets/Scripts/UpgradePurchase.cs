@@ -18,6 +18,8 @@ public class UpgradePurchase : MonoBehaviour
 
     public buildingScript buildingStoredPurchase;
 
+    public Emissions emissionsScript;
+
     public GameObject building;
 
     
@@ -70,8 +72,11 @@ public class UpgradePurchase : MonoBehaviour
             
             LoadPanels();
             CheckPurchaseable();
+            emissionsScript.updateWithPurchase(shopItemsSO[btnNo].emissionDecrease);
         }
     }
+
+    
 
 
     public void LoadPanels()
