@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: LED Lightbulb Replacement
   cost: 5000
+  emissionDecrease: 1.3

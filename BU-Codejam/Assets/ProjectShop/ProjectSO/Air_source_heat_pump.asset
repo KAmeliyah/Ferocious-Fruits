@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Air source heat pump
   cost: 175000
-  emissionDecrease: 2
+  emissionDecrease: 20

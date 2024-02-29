@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Insulate Walls
   cost: 40000
+  emissionDecrease: 2

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: IT Server Upgrades
   cost: 15000
+  emissionDecrease: 2
