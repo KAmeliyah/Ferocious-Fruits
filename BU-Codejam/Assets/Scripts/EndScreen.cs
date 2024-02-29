@@ -26,7 +26,7 @@ public class EndScreen : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
-        restartButton.onClick.AddListener(Restart);
+        //restartButton.onClick.AddListener(Restart);
     }
 
     // Update is called once per frame

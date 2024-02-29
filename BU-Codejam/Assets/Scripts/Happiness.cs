@@ -25,18 +25,18 @@ public class Happiness : MonoBehaviour
 
         Sprite sp = Resources.Load<Sprite>("Graphics/Faces/T_happy");
 
-        moneyChange = 20000;
+        moneyChange = 300000;
 
         if (happy < 66)
         {
             sp = Resources.Load<Sprite>("Graphics/Faces/T_neutral");
-            moneyChange = 10000;
+            moneyChange = 100000;
         }
 
         if (happy < 33)
         {
             sp = Resources.Load<Sprite>("Graphics/Faces/T_sad");
-            moneyChange = 5000;
+            moneyChange = 0;
         }
 
         if (sp == null)
@@ -48,7 +48,7 @@ public class Happiness : MonoBehaviour
 
         if (happy <= 0) 
         {
-            moneyChange = -20000;
+            moneyChange = -200000;
         }
     }
 

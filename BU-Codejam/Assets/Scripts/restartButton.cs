@@ -7,12 +7,14 @@ public class restartButton : MonoBehaviour
 {
     Button self;
 
-    public universityManager m_universityManager;
-    public Emissions m_emissions;
-    public Happiness m_happiness;
-    public Weeks m_weeks;
-    public Cinemachine.CinemachineVirtualCamera dragCamera;
+    //public universityManager m_universityManager;
+    //public Emissions m_emissions;
+    //public Happiness m_happiness;
+    //public Weeks m_weeks;
+    //public Cinemachine.CinemachineVirtualCamera dragCamera;
     public startScreen startScreen;
+
+    public EndScreen endScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +31,16 @@ public class restartButton : MonoBehaviour
 
     void Restart()
     {
-        dragCamera.m_Priority += 2;
-        dragCamera.transform.position = new Vector3(18.60178f, 20f, 7.346703f);
-        m_emissions.emissions = 0;
-        m_emissions.emissionRate = 25;
+        //dragCamera.m_Priority += 2;
+        //dragCamera.transform.position = new Vector3(18.60178f, 20f, 7.346703f);
+        //m_emissions.emissions = 0;
+        //m_emissions.emissionRate = 25;
 
-        m_happiness.happy = 100;
+        //m_happiness.happy = 100;
 
-        m_weeks.week = 0;
+        //m_weeks.week = 0;
 
-        startScreen.restartGame();
+        //startScreen.restartGame();
+        endScreen.Show();
     }
 }
