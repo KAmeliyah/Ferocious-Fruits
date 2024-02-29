@@ -7,6 +7,8 @@ public class Happiness : MonoBehaviour
 {
     public int happy;
     private Image imageComponent;
+    public universityManager BU;
+    int moneyChange = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +22,18 @@ public class Happiness : MonoBehaviour
 
         Sprite sp = Resources.Load<Sprite>("Graphics/Faces/T_happy");
 
+        moneyChange = 20000;
+
         if (happy < 66)
         {
             sp = Resources.Load<Sprite>("Graphics/Faces/T_neutral");
+            moneyChange = 10000;
         }
 
         if (happy < 33)
         {
             sp = Resources.Load<Sprite>("Graphics/Faces/T_sad");
+            moneyChange = 5000;
         }
 
         if (sp == null)
@@ -37,14 +43,15 @@ public class Happiness : MonoBehaviour
 
         imageComponent.sprite = sp;
 
-        if (happy == 0) 
-        { 
-            //increase water levels
+        if (happy <= 0) 
+        {
+            moneyChange = -20000;
         }
     }
 
-    public void change()
+    public void change(int value)
     {
-        happy -= 5;
+        happy += value;
+        BU.budget += moneyChange;
     }
 }
