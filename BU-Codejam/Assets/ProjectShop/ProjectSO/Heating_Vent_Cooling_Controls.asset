@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Heating Vent Cooling Controls
   cost: 35000
+  emissionDecrease: 0.25

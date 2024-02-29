@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectName: Computer Monitor Upgrades
   cost: 200
+  emissionDecrease: 0.06
