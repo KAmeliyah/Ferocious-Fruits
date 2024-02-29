@@ -10,6 +10,7 @@ public class Emissions : MonoBehaviour
     public int maxEmissions = 500;
     public float emissionRate = 15;
     public EndScreen endScreen;
+
     // Start is called before the first frame update
     void Start()
     {

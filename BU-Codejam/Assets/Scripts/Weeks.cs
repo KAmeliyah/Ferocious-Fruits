@@ -36,7 +36,7 @@ public class Weeks : MonoBehaviour
 
             weekLabel.text = "Week " + week;
             emissions.grow();
-            happiness.change();
+            happiness.change(5);
 
             // Update the last iteration time
             lastIterationTime = Time.time;
